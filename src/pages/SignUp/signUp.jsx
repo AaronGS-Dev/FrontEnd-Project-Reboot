@@ -13,8 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './signUp.css'
-// import { logIn } from '../../services/loginServices';
-
+import { signUp } from '../../services/signupServices';
+import { useNavigate } from 'react-router-dom';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -33,7 +33,8 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function Signup() {
-  const handleSubmit = (event) => {
+  const navigate =useNavigate()
+  const handleSubmit =async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const credentials = {
@@ -42,9 +43,10 @@ export default function Signup() {
         password: data.get('password'),
         direction: data.get('direction'),
         postal_code: data.get('postal_code')
-    }
-    
-    Signup(credentials)
+    };
+   
+    await signUp(credentials)
+    navigate('/')
 
   };
 
@@ -72,11 +74,22 @@ export default function Signup() {
               required
               fullWidth
               className="field"
-              label="name"
+              label="Name"
               name="name"
               autoComplete="name"
               autoFocus
             />
+              <TextField
+              margin="normal"
+              required
+              fullWidth
+              className="field"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+
         
             <TextField
               margin="normal"
@@ -89,16 +102,6 @@ export default function Signup() {
               autoComplete="current-password"
             />
 
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              className="field"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
               <TextField
               margin="normal"
               required

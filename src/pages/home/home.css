@@ -1,20 +1,3 @@
 body{
     background-image: url(../../..//img/Fondo.webp);
 }
-
-#form{
-    background-color: rgba(211, 209, 187, 0.7);
-    border-radius: 2rem;
-}
-
-#buttonSign{
-    background-color:#253f3f ;
-    border-radius: 5rem;
-}
-
-#email{
-    background-color: #F0E2C6;
-}
-#password{
-    background-color: #F0E2C6;
-}

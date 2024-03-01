@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './login.css'
 import { logIn } from '../../services/loginServices';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -31,18 +32,18 @@ function Copyright(props) {
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
-
 export default function Login() {
-  const handleSubmit = (event) => {
+  const navigate =useNavigate()
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const credentials = {
-        email: data.get('email'),
-        password: data.get('password'),
+      email: data.get('email'),
+      password: data.get('password'),
     }
     
-logIn(credentials)
-
+    await logIn(credentials)
+    navigate('/')
   };
 
   return (
@@ -94,17 +95,23 @@ logIn(credentials)
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              
             >
               Sign In
             </Button>
-            <Grid container>
-      
-              <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
+            <div>
+            <h3 id='message'>Do not have an account?</h3>
+            <Button
+              type="submit"
+              id='buttonSignUp'
+              fullWidth
+              href="/signup" 
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign up
+            </Button>
+            </div>
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />

@@ -6,7 +6,7 @@ import Signup from '../pages/SignUp/signUp'
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />
+        element: <Home/>
     },
     {
         path: '/login',
@@ -15,7 +15,8 @@ const router = createBrowserRouter([
     {
         path: '/signup',
         element: <Signup/>
-    }
+    },
+   
 ])
 
 export default router
