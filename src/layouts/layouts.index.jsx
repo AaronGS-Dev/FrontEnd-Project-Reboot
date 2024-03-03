@@ -1,12 +1,15 @@
-import React from "react"
-import Footer from "../components/footer/footer"
-import ResponsiveAppBar from "../components/header/header"
+import { Outlet } from "react-router-dom"
+// import Footer from "../components/footer/footer"
+import Header from "../components/header/header"
 const Layout = () => {
     return(
 
         <div>
-            <ResponsiveAppBar/>
-            <Footer/>
+            <Header/>
+            <div>
+            <Outlet/>
+            </div>
+            {/* <Footer/> */}
         </div>
     )
 }

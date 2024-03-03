@@ -1,5 +1,9 @@
-body{
+#todo{
     background-image: url(../../..//img/Fondo.webp);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #form{

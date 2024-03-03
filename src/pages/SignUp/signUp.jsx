@@ -46,17 +46,17 @@ export default function Signup() {
     };
    
     await signUp(credentials)
-    navigate('/')
+    navigate('/layout')
 
   };
 
   return (
+    <div id='todo'>
     <ThemeProvider theme={defaultTheme}>
       <Container  id='form' component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -142,7 +142,7 @@ export default function Signup() {
               type="submit"
               id='buttonSignUp'
               fullWidth
-              href="/login" 
+              href="/" 
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
@@ -154,5 +154,6 @@ export default function Signup() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 }

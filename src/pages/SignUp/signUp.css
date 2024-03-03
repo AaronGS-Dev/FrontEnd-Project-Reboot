@@ -1,7 +1,10 @@
-body{
+#todo{
     background-image: url(../../..//img/Fondo.webp);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 #form{
     background-color: rgba(211, 209, 187, 0.7);
     border-radius: 2rem;
