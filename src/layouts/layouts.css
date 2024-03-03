@@ -1,0 +1,10 @@
+#maincontainer{
+    display:grid;
+    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-rows: 0.1fr 2fr 0.1fr ;
+}
+#outletcontainer{
+    grid-column:2/3;
+    grid-row: 2/3;
+    
+}

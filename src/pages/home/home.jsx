@@ -1,9 +1,8 @@
+import FoodList from '../FoodList/FoodList'
 import './home.css'
-
-
 
 export default function Home() {
     return(
-        <p>hola </p>
+       <FoodList/>
         )
 }
