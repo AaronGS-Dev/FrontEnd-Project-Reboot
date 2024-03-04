@@ -1,3 +1,18 @@
 #titlecard{
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+        font-size: medium;
+}
+#imagen{
+    padding-top: 1rem;
+}
+
+#diet{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#box-button{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
 }

@@ -5,3 +5,10 @@ export const foodCall = async () => {
     console.log(data)
 return data
 }
+
+
+export const getOneFood = async (id) =>{
+    const {data: {food}} = await api.get(`/foods/${id}`)
+    console.log(food)
+    return food
+}

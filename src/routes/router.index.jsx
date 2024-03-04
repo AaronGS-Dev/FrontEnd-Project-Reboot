@@ -7,6 +7,7 @@ import Login from '../pages/login/login'
 import Signup from '../pages/SignUp/signUp'
 import AboutUs from '../pages/aboutUs/aboutUs'
 import Profile from '../components/profile/profile'
+import FoodComponent from '../components/CallFoodList/FoodComponent'
 
 const router = createBrowserRouter([
 
@@ -31,10 +32,13 @@ const router = createBrowserRouter([
             element:<AboutUs/>
         },
         {
-            path: '/layout/profile/:id',
+            path: '/layout/profile/',
             element:<Profile/>
         },
-       
+        {
+            path: '/layout/food/:foodId/',
+            element:<FoodComponent/>
+        },
        
     ]
     

@@ -14,10 +14,9 @@ const FoodList = () => {
         getFoods()
     }, [])
     const foodList = () =>{
-      console.log(foods)
       const result = foods.map((food)=>{
         
-        return <FoodCard title={food.title} image={food.image} diet={food.diet} description={food.description}/>
+        return <FoodCard id={food.id} title={food.title} image={food.image} diet={food.diet} description={food.description}/>
       })
       return result
     }
