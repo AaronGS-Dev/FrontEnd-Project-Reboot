@@ -1,4 +1,4 @@
-import * as React from 'react';
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -42,11 +42,10 @@ export default function Profile() {
         password: data.get('password'),
         direction: data.get('direction'),
         postal_code: data.get('postal_code')
-    };
-   
-    await profileEdit(credentials, id)
-    navigate('/layout')
-
+      };
+      
+      await profileEdit(credentials, id)
+      navigate('/layout')
   };
 
   return (

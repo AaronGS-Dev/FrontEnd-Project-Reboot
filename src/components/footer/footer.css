@@ -1,0 +1,22 @@
+#footer{
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.iconsContainer {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+
+
+  .copyrightContainer {
+    display: flex;
+    justify-content: left;
+    font-style: italic;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }

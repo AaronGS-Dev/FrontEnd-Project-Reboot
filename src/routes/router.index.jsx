@@ -8,7 +8,7 @@ import Signup from '../pages/SignUp/signUp'
 import AboutUs from '../pages/aboutUs/aboutUs'
 import Profile from '../components/profile/profile'
 import FoodComponent from '../components/CallFoodList/FoodComponent'
-
+import Cartlist from '../pages/Cart/Cart'
 const router = createBrowserRouter([
 
 {
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
             path: '/layout/food/:foodId/',
             element:<FoodComponent/>
         },
+        {
+            path:'/layout/cart',
+            element:<Cartlist/>
+        }
        
     ]
     
@@ -50,6 +54,10 @@ const router = createBrowserRouter([
 {
     path: '/signup',
     element: <Signup/>
+},
+{
+    path: '/profile/',
+    element:<Profile/>
 },
    
 ])

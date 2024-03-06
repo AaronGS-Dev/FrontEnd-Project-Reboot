@@ -1,5 +1,8 @@
 .logo{
-    max-width: 20%;
-    height: 20%;
-    
+    max-width: 30%;
+    height: 30%; 
+}
+.navbar{
+    text-decoration: none;
+    color: #7fb876ff;
 }
