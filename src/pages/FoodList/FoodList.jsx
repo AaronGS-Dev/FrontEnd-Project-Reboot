@@ -21,10 +21,12 @@ const FoodList = () => {
       return result
     }
   return (
-
-    <div id="list">
+    <div id='h1cart'>
+<h1 id='h1h1'>Healthy Food</h1>
+    <div id="list"> 
       {foodList()}
       </div>
+    </div>
   )
 }
 

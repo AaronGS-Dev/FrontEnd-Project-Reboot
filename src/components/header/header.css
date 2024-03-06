@@ -1,8 +1,12 @@
+#headerapp{
+    background-color: #8767b8ff ;
+}
 .logo{
     max-width: 30%;
     height: 30%; 
 }
 .navbar{
     text-decoration: none;
-    color: #7fb876ff;
+    color: rgb(126, 192, 116);
+ 
 }

@@ -28,7 +28,8 @@ function CartList() {
   // }
 
   return (
-    <div >
+    <div id='h1cart'>
+      <h1 id='h1h1'>Your Shopping Cart</h1>
       <div id='list'>
         {listData?.foods?.map((food, index) => (
           <FoodDetails 
@@ -41,7 +42,6 @@ function CartList() {
           />
         ))}
       </div>
-  
     </div>
   );
 }
